@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Praktikum 3 - Pemrograman Berbasis WEB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #1d1d5e; /* Dark blue background */
+      padding: 20px;
+      text-align: center;
+    }
+    header h2, header p {
+      font-family: "Futura", sans-serif;
+      color: rgb(255, 255, 255);
+    }
+    nav {
+      background-color: #313147;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    main {
+      display: flex;
+    }
+    article {
+      flex: 3;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+    aside {
+      flex: 1;
+      background-color: #6257ff;
+      padding: 20px;
+    }
+    aside ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    aside ul li a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+    .content-section {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .social-links {
+      margin-top: 20px;
+    }
+    .social-links a {
+      display: inline-block;
+      margin-right: 10px;
+      color: #1d1d5e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      var sections = document.getElementsByClassName('content-section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+      }
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h2>Praktikum 3 - Pemrograman Berbasis WEB</h2>
+    <p>Website Sederhana</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">HOME</a>
+    <a onclick="showSection('profil')">PROFIL</a>
+    <a onclick="showSection('tentang')">TENTANG SAYA</a>
+    <a onclick="showSection('kontak')">KONTAK SAYA</a>
+  </nav>
+
+  <main>
+    <article>
+      <div id="home" class="content-section active">
+        <h3>Selamat datang di Website</h3>
+        <p>Faiza Fitri Farikhatusshifa</p>
+      </div>
+
+      <div id="profil" class="content-section">
+        <h3>Profil</h3>
+        <p>
+          Nama                  : Faiza Fitri Farikhatusshifa<br>
+          Umur                  : 22 tahun<br>
+          Tempat, Tanggal Lahir : Jakarta, 16 Desember 2002<br>
+          Jenis Kelamin         : Perempuan<br>
+          Alamat                : Jl.H.Nadih, Jati Bening Baru II<br>
+          Pendidikan            : Sedang Menempuh Gelar S1 di Universitas Darma Persada<br>
+          Jurusan               : Sistem Informasi<br>
+        </p>
+      </div>
+
+      <div id="tentang" class="content-section">
+        <h3>Tentang Saya</h3>
+        <p>
+        Halo perkenalan, nama lengkap saya Faiza Fitri Farikhatusshifa, biasa dipanggil Faiza. Saya lahir dan di besarkan di Jakarta. Riwayat pendidikan saya dimulai dari SDN Pondok Kelapa 06 Pagi, lalu saya melanjutkan ke SMPN 194 Jakarta, dan SMA di SMAS Perguruan Rakyat 2 Jakarta. Saat ini saya sedang menempuh pendidikan di Universitas Darma Persada, di jurusan Sistem Informasi. Penghargaan yang pernah saya peroleh yaitu pada lomba FLS2N Cerita Bergambar pada saat duduk di Sekolah Dasar. Pada saat duduk di bangku SMP saya aktif dalam mengikuti kegiatan ekstrakurikuler yaitu Matematika Club. Saat duduk di bangku SMA saya mengikuti event yang ada di Sekolah saya menjadi Divisi HPD (Humas Publikasi dan Dokumentasi). Saat SMA saya juga pernah mendapatkan kuota eligible dan mengikuti tes di beberapa universitas ternama tetapi saya mengambil Universitas Darma Persada di karenakan saya tertarik dengan lingkungan yang ada di Universitas Darma Persada.
+        </p>
+      </div>
+
+      <div id="kontak" class="content-section">
+        <h3>Kontak Saya</h3>
+        <p>Email: <a href="mailto:faizafitri123@gmail.com">faizafitri123@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/6282246553077" target="_blank">+62 822-4655-3077</a></p>
+        <p>Github: <a href="https://github.com/faizaaa0016" target="_blank">faizaaa0016</a></p>
+        </div>
+      </div>
+    </article>
+
+    <aside>
+      <h4>Pemberitahuan</h4>
+      <ul>
+        <li><a href="#">Halo nama saya Faiza, saat ini saya sedang belajar membuat website sederhana yaitu menggunakan html dan CSS.</a></li>
+      </ul>
+    </aside>
+  </main>
+
+</body>
+</html>
